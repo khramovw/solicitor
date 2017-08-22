@@ -160,17 +160,14 @@ input, textarea, input:before, textarea:before, input:after, textarea:after {
   display: inline-block;
   vertical-align: middle; }
 
-.find-solicitor .country-link, .solicitor-text, .login-btn {
+.find-solicitor .country-link, .login-solicitor .solicitor-text, .login-solicitor .login-btn {
   width: 50%; }
 
 .colum-3 {
   width: 33%; }
   @media (max-width: 767px) {
     .colum-3 {
-      width: 48%; } }
-  @media (max-width: 641px) {
-    .colum-3 {
-      width: 100%; } }
+      width: 75%; } }
 
 .bg-gray {
   background: #f6f8f8; }
@@ -184,9 +181,6 @@ input, textarea, input:before, textarea:before, input:after, textarea:after {
 .sub {
   font-size: 12px;
   color: inherit; }
-
-.news-row {
-  padding: 0 -12px; }
 
 .row-footer {
   text-align: center; }
@@ -276,20 +270,6 @@ input, textarea, input:before, textarea:before, input:after, textarea:after {
   -webkit-border-radius: 1.5px;
           border-radius: 1.5px;
   border: 1px solid transparent; }
-  @media (max-width: 1099px) {
-    .btn {
-      padding: 10px 27px; } }
-  @media (max-width: 1023px) {
-    .btn {
-      padding: 10px 20px; } }
-  @media (max-width: 921px) {
-    .btn {
-      padding: 10px 15px;
-      font-size: 13px; } }
-  @media (max-width: 800px) {
-    .btn {
-      padding: 8px 13px;
-      font-size: 12px; } }
   .btn.btn-orange {
     color: #ef6223;
     border-color: #ef6223;
@@ -297,7 +277,7 @@ input, textarea, input:before, textarea:before, input:after, textarea:after {
     @media (max-width: 640px) {
       .btn.btn-orange {
         width: 48%; } }
-    @media (max-width: 480px) {
+    @media (max-width: 511px) {
       .btn.btn-orange {
         width: 80%; } }
     .btn.btn-orange.btn-orange:hover {
@@ -319,6 +299,9 @@ input, textarea, input:before, textarea:before, input:after, textarea:after {
   .header .logo {
     float: left;
     margin-top: 13px; }
+    @media (max-width: 767px) {
+      .header .logo {
+        width: 70%; } }
   @media (max-width: 768px) {
     .header .slicknav_menu {
       display: block; } }
@@ -372,8 +355,8 @@ input[type="checkbox"] {
       -webkit-border-radius: 2px;
               border-radius: 2px;
       background: #FFF;
-      -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.22) inset;
-              box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.22) inset;
+      -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22) inset;
+              box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22) inset;
       margin-right: 10px; }
   input[type="checkbox"]:checked + label::before {
     background: #fff url("../img/checboxchecedbg.png") no-repeat; }
@@ -384,6 +367,8 @@ input[type="checkbox"] {
   background: #f3f3f3;
   color: #9ca3a7;
   cursor: pointer; }
+  .jq-selectbox__select .jq-selectbox__select-text {
+    min-width: 140px; }
 
 .jq-selectbox__dropdown {
   width: 100%;
@@ -392,6 +377,12 @@ input[type="checkbox"] {
   cursor: pointer;
   background: #f3f3f3;
   top: 0; }
+  .jq-selectbox__dropdown ul li {
+    min-height: 50px;
+    padding: 18px 0 18px 14px; }
+  .jq-selectbox__dropdown ul li:hover {
+    background: #ef6223;
+    color: #fff; }
 
 .simple-block {
   display: inline-block;
@@ -409,68 +400,43 @@ input[type="checkbox"] {
   .simple-block a {
     color: #ef6223; }
 
-.service-item {
+.service-wrap .service-item {
   display: inline-block; }
-  .service-item a {
+  .service-wrap .service-item a {
     color: #ef6223;
     font-family: "proxima_nova_ltsemibold";
     font-size: 20px; }
-  .service-item p {
-    font-size: 16px; }
-
-.block-articles h3 {
-  font-size: 24px;
-  color: #FFF; }
-
-.block-articles .news-content {
-  background: #fff;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
-  border-top: 6px solid #90bed5;
-  text-align: left; }
-  .block-articles .news-content span {
-    font-size: 19px;
-    font-family: "proxima_nova_ltsemibold";
-    color: #515a60;
-    line-height: 15px; }
-    @media (max-width: 995px) {
-      .block-articles .news-content span {
-        font-size: 17px; } }
-    @media (max-width: 840px) {
-      .block-articles .news-content span {
-        font-size: 15px; } }
-  .block-articles .news-content p {
-    font-size: 15px;
-    font-family: "proxima_nova_rgregular";
-    margin-top: 15px; }
-    @media (max-width: 995px) {
-      .block-articles .news-content p {
-        font-size: 14px; } }
-    @media (max-width: 985px) {
-      .block-articles .news-content p {
-        font-size: 13px;
-        margin: 7% 0; } }
-    @media (max-width: 798px) {
-      .block-articles .news-content p {
-        font-size: 12px; } }
-    @media (max-width: 767px) {
-      .block-articles .news-content p {
-        margin: 1% 0; } }
-  .block-articles .news-content a {
-    color: #30436b;
+  .service-wrap .service-item p {
     font-size: 16px;
-    font-family: "proxima_nova_ltsemibold"; }
-    @media (max-width: 995px) {
-      .block-articles .news-content a {
-        font-size: 16px; } }
-    @media (max-width: 995px) {
-      .block-articles .news-content a {
-        font-size: 15px; } }
-    @media (max-width: 798px) {
-      .block-articles .news-content a {
-        font-size: 13px; } }
-  .block-articles .news-content a:hover {
-    color: #ef6223; }
+    color: #a0a7ab; }
+
+@media (max-width: 511px) {
+  .service-wrap .container .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+@media (max-width: 767px) {
+  .service-wrap .container .row .service-item.colum-3 {
+    width: 48%; } }
+
+@media (max-width: 511px) {
+  .service-wrap .container .row .service-item.colum-3 {
+    width: 75%; } }
+
+@media (max-width: 410px) {
+  .service-wrap .container .row .service-item.colum-3 {
+    width: 100%; } }
 
 .more-areas {
   margin-bottom: 70px; }
@@ -480,12 +446,82 @@ input[type="checkbox"] {
     color: #515a60;
     margin-bottom: 17px; }
 
-.category-btn span, .solicitir-text {
+.block-articles h3 {
+  font-size: 24px;
+  color: #FFF; }
+
+@media (max-width: 767px) {
+  .block-articles .news-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+.block-articles .news-row .news-post {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767px) {
+    .block-articles .news-row .news-post + .news-post {
+      margin-top: 14px; } }
+  .block-articles .news-row .news-post .news-content {
+    background: #fff;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    border-top: 6px solid #90bed5;
+    text-align: left; }
+    .block-articles .news-row .news-post .news-content span {
+      font-size: 20px;
+      font-family: "proxima_nova_ltsemibold";
+      color: #515a60; }
+    .block-articles .news-row .news-post .news-content p {
+      font-size: 16px;
+      font-family: "proxima_nova_rgregular";
+      margin-top: 15px;
+      color: #a0a7ab; }
+    .block-articles .news-row .news-post .news-content a {
+      color: #30436b;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold"; }
+    .block-articles .news-row .news-post .news-content a:hover {
+      color: #ef6223; }
+
+.category-btn span, .category-btn .title, .login-solicitor .solicitir-text {
   color: #FFF;
   font-family: "proxima_nova_ltsemibold"; }
 
-.category-btn {
+.category-btn .title {
   font-size: 24px; }
+
+.category-btn .block-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (max-width: 746px) {
+    .category-btn .block-btn {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .category-btn .block-btn .btn + .btn {
+        margin-left: 0;
+        margin-top: 15px; } }
 
 .top-counties {
   font-size: 38px;
@@ -501,6 +537,9 @@ input[type="checkbox"] {
   text-transform: uppercase;
   color: #515a60;
   cursor: pointer; }
+  @media (max-width: 320px) {
+    .footer .footer-menu {
+      font-size: 10px; } }
   .footer .footer-menu a:hover {
     color: #ef6223; }
 
@@ -654,13 +693,17 @@ input[type="checkbox"] {
       width: 325px; }
       @media (max-width: 835px) {
         .inner .inner-form .first-form .form-control {
-          width: 290px; } }
+          min-width: 42%; } }
       @media (max-width: 767px) {
         .inner .inner-form .first-form .form-control {
           width: 100%; } }
     .inner .inner-form .form-btn {
       height: 58px;
       padding: 0 22px; }
+      @media (max-width: 835px) {
+        .inner .inner-form .form-btn {
+          width: 45%;
+          margin-top: 5px; } }
       @media (max-width: 768px) {
         .inner .inner-form .form-btn {
           width: 100%; } }
@@ -756,7 +799,7 @@ input[type="checkbox"] {
   .block-articles h3 {
     padding-bottom: 47px; }
   .block-articles .news-post {
-    height: 140px;
+    min-height: 200px;
     float: left;
     padding: 0 12px;
     overflow: hidden; }
@@ -765,16 +808,16 @@ input[type="checkbox"] {
         padding: 0 6px; } }
     @media (max-width: 767px) {
       .block-articles .news-post {
-        height: 90px; } }
-  .block-articles .news-content {
-    padding: 13px; }
-    @media (max-width: 918px) {
-      .block-articles .news-content {
-        padding: 8px; } }
+        min-height: 140px; } }
+    .block-articles .news-post .news-content {
+      padding: 13px; }
+      @media (max-width: 918px) {
+        .block-articles .news-post .news-content {
+          padding: 8px; } }
 
 .category-btn {
   text-align: center;
-  height: 190px; }
+  padding-bottom: 50px; }
   .category-btn .title {
     margin-bottom: 46px;
     display: inline-block; }
@@ -793,8 +836,6 @@ input[type="checkbox"] {
         padding: 40px 0; } }
     .top-counties .counties-place .btn-orange {
       margin-top: 15px; }
-      .top-counties .counties-place .btn-orange + .btn-orange {
-        margin-left: 5px; }
 
 @media (max-width: 1023px) {
   .country-wrap {
@@ -851,55 +892,78 @@ input[type="checkbox"] {
             font-size: 12px; } }
 
 .login-solicitor {
-  height: 160px;
+  min-height: 160px;
   padding-top: 38px; }
   @media (max-width: 1023px) {
     .login-solicitor {
       padding: 42px 40px; } }
   @media (max-width: 767px) {
     .login-solicitor {
-      padding: 30px 0; } }
-  @media (max-width: 480px) {
-    .login-solicitor {
-      height: 180px; } }
+      padding: 30px 0;
+      min-height: 240px; } }
   @media (max-width: 327px) {
     .login-solicitor {
       padding: 15px 0; } }
-
-.solicitor-text, .login-btn {
-  display: inline-block;
-  float: left; }
-  @media (max-width: 767px) {
-    .solicitor-text, .login-btn {
-      width: 100%; } }
-
-.solicitor-text {
-  text-align: left;
-  color: #FFF; }
-  @media (max-width: 767px) {
-    .solicitor-text {
-      text-align: center; } }
-  .solicitor-text .title {
-    font-size: 32px;
-    font-family: "proxima_nova_ltsemibold"; }
-  .solicitor-text span {
-    padding-right: 20px;
-    display: inline-block; }
-
-.login-btn {
-  text-align: right;
-  margin-top: 17px; }
-  @media (max-width: 767px) {
-    .login-btn {
-      text-align: center; } }
-  .login-btn .btn {
+  .login-solicitor .solicitor-text, .login-solicitor .login-btn {
     display: inline-block;
-    color: #fff; }
-    .login-btn .btn + .btn {
-      margin-left: 42px; }
-      @media (max-width: 800px) {
-        .login-btn .btn + .btn {
-          margin-left: 30px; } }
+    float: left; }
+    @media (max-width: 767px) {
+      .login-solicitor .solicitor-text, .login-solicitor .login-btn {
+        width: 100%; } }
+  .login-solicitor .solicitor-text {
+    text-align: left;
+    color: #FFF; }
+    @media (max-width: 767px) {
+      .login-solicitor .solicitor-text {
+        text-align: center; } }
+    .login-solicitor .solicitor-text .title {
+      font-size: 32px;
+      font-family: "proxima_nova_ltsemibold"; }
+    .login-solicitor .solicitor-text span {
+      padding-right: 20px;
+      display: inline-block; }
+  .login-solicitor .login-btn {
+    text-align: right;
+    margin-top: 17px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center; }
+    @media (max-width: 907px) {
+      .login-solicitor .login-btn {
+        margin-top: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      .login-solicitor .login-btn {
+        text-align: center;
+        margin: 20px 0 30px 0; } }
+    .login-solicitor .login-btn .btn {
+      display: inline-block;
+      color: #fff;
+      width: 80%; }
+      .login-solicitor .login-btn .btn + .btn {
+        margin-left: 42px; }
+        @media (max-width: 960px) {
+          .login-solicitor .login-btn .btn + .btn {
+            margin-left: 15px;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; } }
+        @media (max-width: 907px) {
+          .login-solicitor .login-btn .btn + .btn {
+            margin-left: 0;
+            margin-top: 15px; } }
 
 .footer {
   padding-top: 40px; }
@@ -908,5 +972,11 @@ input[type="checkbox"] {
     margin-bottom: 35px; }
     .footer .footer-menu a + a {
       margin-left: 25px; }
+      @media (max-width: 380px) {
+        .footer .footer-menu a + a {
+          margin-left: 10px; } }
+      @media (max-width: 320px) {
+        .footer .footer-menu a + a {
+          margin-left: 8px; } }
   .footer .footer-copyrit {
     margin: 30px 0; }

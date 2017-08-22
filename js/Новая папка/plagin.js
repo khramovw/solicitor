@@ -1,19 +1,10 @@
 ;(function ($) {
 	var moreOptionBtn = $('.more-option');
 	var secondForm = $('.second-form');
-    var serchic = $('.serch-ic');
-    var moresearch = $('.more-search');
 
-	moreOptionBtn.on( 'click', function (e){
-        if ($(e.target).text() === "– More option") {
-            console.log("close form");
-            $(e.target).text("+ More option");
-        } else {
-            console.log("open form");
-            $(e.target).text("– More option");
-        }
+	moreOptionBtn.on( 'click', function (){
 		secondForm.slideToggle(1000);
-		//moreOptionBtn.toggleClass('open');
+		moreOptionBtn.toggleClass('open');
 		
 	});
 
